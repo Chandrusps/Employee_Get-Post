@@ -31,6 +31,7 @@ public class EmployeeController {
     @RequestMapping(value ="/empGetAll",method=RequestMethod.GET)
     public List<Employee> getEmloyee(){
         return employeeRepository.findAll();
+       // System.out.println("Success");
     }
 
     @PostMapping("/emppost")
