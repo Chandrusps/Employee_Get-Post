@@ -32,6 +32,9 @@ public class EmployeeController {
     public List<Employee> getEmloyee(){
         return employeeRepository.findAll();
        // System.out.println("Success");
+        // System.out.println("Success");
+        // System.out.println("Success");
+
     }
 
     @PostMapping("/emppost")
