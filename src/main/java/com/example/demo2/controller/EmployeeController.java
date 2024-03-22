@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("/emp")
@@ -25,6 +26,11 @@ public class EmployeeController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @RequestMapping(value ="/empGetAll",method=RequestMethod.GET)
+    public List<Employee> getEmloyee(){
+        return employeeRepository.findAll();
     }
 
     @PostMapping("/emppost")
